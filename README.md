@@ -19,7 +19,7 @@ Crowd crushes kill hundreds of people every year. They build over minutes but tu
 |---|---|---|---|---|
 | Existing crowd systems | ₹50,000+ | ❌ | ❌ | ✅ |
 | Camera-based AI | ₹20,000+ | ❌ | ❌ | ❌ |
-| **CrowdGuard** | **< ₹2,000** | **✅** | **✅** | **✅** |
+| **CrowdGuard** | **< ₹1,000** | **✅** | **✅** | **✅** |
 
 ---
 
