@@ -1,4 +1,4 @@
-# CrowdGuard 🚨
+# MobAlert 🚨
 ### Crowd Crush Early Warning System
 
 > *"Seconds of warning. Lives saved."*
@@ -19,13 +19,13 @@ Crowd crushes kill hundreds of people every year. They build over minutes but tu
 |---|---|---|---|---|
 | Existing crowd systems | ₹50,000+ | ❌ | ❌ | ✅ |
 | Camera-based AI | ₹20,000+ | ❌ | ❌ | ❌ |
-| **CrowdGuard** | **< ₹1,000** | **✅** | **✅** | **✅** |
+| **MobAlert** | **< ₹1,000** | **✅** | **✅** | **✅** |
 
 ---
 
 ## How It Works
 
-CrowdGuard reads 3 sensors continuously and fuses their data into a single **Risk Score (0–100)**. When thresholds are crossed, it triggers escalating responses — culminating in a physical servo gate that blocks new entries.
+MobAlert reads 3 sensors continuously and fuses their data into a single **Risk Score (0–100)**. When thresholds are crossed, it triggers escalating responses — culminating in a physical servo gate that blocks new entries.
 
 ```
 MPU6050  →  Floor vibration intensity (crowd footsteps)
@@ -149,7 +149,7 @@ Open Arduino IDE → Tools → Manage Libraries, search and install:
 - Port: your ESP32's COM port
 
 ### Step 3 — Update Wi-Fi Credentials
-In `CrowdGuard.ino`, find and update:
+In `MobAlert.ino`, find and update:
 ```cpp
 const char* ssid     = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
@@ -163,7 +163,7 @@ If Wi-Fi is unavailable, the system runs in offline mode — all hardware alerts
 ```
 [OK] MPU6050 connected.
 [WiFi] Connected. Dashboard: http://192.168.x.x
-[CrowdGuard] System ready. Monitoring started.
+[MobAlert] System ready. Monitoring started.
 Score | Vib(G) | Dist(cm) | Temp(C) | Level
 ------+--------+----------+---------+-------
    12 |  0.04  |    185    |   27.3  |   0
@@ -218,7 +218,7 @@ Vib:0.04 Dist:185.0 Temp:27.3 Score:12 Level:0
 
 Critical alert (on entering Critical, then every 10 seconds):
 ```
-==== CROWDGUARD ALERT ====
+==== MobAlert ALERT ====
 Status : CRITICAL — EVACUATE | Score: 82
 Vib: 2.14G  Dist: 35cm  Temp: 36.2C
 ==========================
@@ -277,8 +277,8 @@ To simulate crowd conditions during testing or presentation:
 ## Project Structure
 
 ```
-CrowdGuard/
-├── CrowdGuard.ino    — main sketch with full comments
+MobAlert/
+├── MobAlert.ino    — main sketch with full comments
 └── README.md         — this file
 ```
 
