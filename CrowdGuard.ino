@@ -1,12 +1,12 @@
 // ╔══════════════════════════════════════════════════════════════╗
-// ║           CrowdGuard — Crowd Crush Early Warning System      ║
+// ║           MobAlert — Crowd Crush Early Warning System      ║
 // ║                                                              ║
 // ║  A real-time IoT safety system that detects crowd crush      ║
 // ║  risk using multi-sensor fusion. Triggers escalating         ║
 // ║  alerts and physically blocks entry at critical levels.      ║
 // ║                                                              ║
 // ║  Built at RESONANCE 2K26                                     ║
-// ║  IEEE VIT Pune Hackathon — April 2025                        ║
+// ║  IEEE VIT Pune Hackathon — April 2026                        ║
 // ║  Author: Aashay Hiwarkar                                     ║
 // ╚══════════════════════════════════════════════════════════════╝
 //
@@ -168,7 +168,7 @@ void setup() {
   // LCD boot message
   lcd.init();
   lcd.backlight();
-  lcd.setCursor(0, 0); lcd.print("CrowdGuard v1   ");
+  lcd.setCursor(0, 0); lcd.print("MobAlert v1   ");
   lcd.setCursor(0, 1); lcd.print("Booting...      ");
   delay(1500);
   lcd.clear();
@@ -203,7 +203,7 @@ void setup() {
   memset(scoreHistory, 0, sizeof(scoreHistory));
 
   // Print Serial Monitor header
-  Serial.println("[CrowdGuard] System ready. Monitoring started.");
+  Serial.println("[MobAlert] System ready. Monitoring started.");
   Serial.println("Score | Vib(G) | Dist(cm) | Temp(C) | Level");
   Serial.println("------+--------+----------+---------+-------");
 }
@@ -491,7 +491,7 @@ void handleRoot() {
 <!DOCTYPE html><html><head>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>CrowdGuard</title>
+<title>MobAlert</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,sans-serif;background:#0d0d0d;color:#eee;padding:16px}
@@ -508,7 +508,7 @@ h2{font-size:.9em;color:#555;margin-bottom:12px;letter-spacing:.06em;text-transf
 canvas{width:100%;height:140px;background:#111;border-radius:10px;border:1px solid #1e1e1e;display:block;margin-bottom:8px}
 .gl{font-size:.7em;color:#444;text-align:right}
 </style></head><body>
-<h2>CrowdGuard — Crowd Crush Early Warning</h2>
+<h2>MobAlert — Crowd Crush Early Warning</h2>
 <div id='status' class='safe'>Loading...</div>
 <div class='cards'>
   <div class='card'><div class='lbl'>Risk Score</div><div class='val' id='sc'>—</div></div>
